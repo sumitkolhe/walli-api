@@ -16,7 +16,7 @@ An Unofficial API for Walli that allows downloading High-quality wallpapers.
   ```
   $ git clone https://github.com/sumitkolhe/walli-api
 
-  $ cd jiosaavn-api
+  $ cd walli-api
   ```
 
 - Install the dependencies
@@ -42,7 +42,7 @@ An Unofficial API for Walli that allows downloading High-quality wallpapers.
 **You can directly deploy this repo to your Vercel account by clicking the button below.**
 <br>
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/sumitkolhe/jiosaavn-api)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/sumitkolhe/walli-api)
 
 ## ✍️ Authors
 
