@@ -1,0 +1,22 @@
+{
+  "name": "walli-api",
+  "version": "1.0.0",
+  "description": "unofficial api for downloading high quality wallpapers from walli",
+  "main": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sumitkolhe/walli-api"
+  },
+  "scripts": {
+    "start": "vercel dev",
+    "deploy": "vercel deploy --prod"
+  },
+  "author": "Sumit Kolhe",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "@vercel/node": "^1.9.0"
+  }
+}
