@@ -9,7 +9,7 @@ import { setHeaders } from "../utils/headers";
 module.exports = async (req: NowRequest, res: NowResponse) => {
   setHeaders(res);
   let query = req.query.query as string;
-  let limit = req.query.limit as string;
+  let count = req.query.count as string;
   let tag = req.query.tag as string;
 
   if (query && tag)
@@ -19,7 +19,7 @@ module.exports = async (req: NowRequest, res: NowResponse) => {
   tag = `filters=_tags:'${tag}'`;
 
   const request_body = {
-    params: `${req.query.tag ? tag : query}&hitsPerPage=${limit ? limit : 5}`,
+    params: `${req.query.tag ? tag : query}&hitsPerPage=${count ? count : 5}`,
   };
 
   try {
@@ -36,7 +36,7 @@ module.exports = async (req: NowRequest, res: NowResponse) => {
       });
   } catch (error) {
     res.status(500).json({
-      message: error.message,
+      message: "something went wrong",
     });
   }
 };

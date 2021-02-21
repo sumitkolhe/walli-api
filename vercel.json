@@ -5,6 +5,7 @@
     { "src": "/wallpaper", "dest": "/api/wallpaper.ts" },
     { "src": "/random", "dest": "/api/random.ts" },
     { "src": "/search", "dest": "/api/search.ts" },
+    { "src": "/category", "dest": "/api/category.ts" },
     { "src": "/categories", "dest": "/api/categories.ts" }
   ]
 }

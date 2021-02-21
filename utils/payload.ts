@@ -19,6 +19,8 @@ export const generateImagePayload = (data: any) => {
     date: data.image_date,
     artist_id: data.artist_id,
     artist_name: data.display_name,
+    artist_bio: data.artist_bio,
+    artist_avatar: data.avatar,
     likes: data.likes,
     downloads: data.downloads,
     copyright: data.copyright,

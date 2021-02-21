@@ -23,7 +23,7 @@ module.exports = async (req: NowRequest, res: NowResponse) => {
       });
   } catch (error) {
     res.status(500).json({
-      message: error.message,
+      message: "something went wrong",
     });
   }
 };

@@ -5,16 +5,14 @@ export interface imageDetails {
   date: number;
   artist_id: string;
   artist_name: string;
+  artist_bio: string;
+  artist_avatar: string; //TODO: Maybe remove?
   likes: string;
   downloads: string;
   location: string;
   copyright: string;
   download_links: Object<string>;
   tags?: Array<string>;
-}
-
-export interface imageListDetails {
-  results: [Array<imageDetails>];
 }
 
 export interface categoryDetails {
