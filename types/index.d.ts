@@ -8,7 +8,9 @@ export interface imageDetails {
   likes: string;
   downloads: string;
   location: string;
+  copyright: string;
   download_links: Object<string>;
+  tags?: Array<string>;
 }
 
 export interface imageListDetails {

@@ -3,20 +3,21 @@ import { AxiosResponse } from "axios";
 import { imageDetails } from "types";
 import { generateImagePayload } from "../utils/payload";
 import { axiosInstance } from "../utils/config";
-import { getImagesUrl } from "../utils/endpoints";
+import { getSearchUrl } from "../utils/endpoints";
 import { setHeaders } from "../utils/headers";
 
 module.exports = async (req: NowRequest, res: NowResponse) => {
   setHeaders(res);
-  const wallpaper_type = req.query.type as string;
+  const query = req.query.query as string;
 
   try {
     await axiosInstance
-      .get(getImagesUrl(wallpaper_type))
-      .then((image_details: AxiosResponse<imageDetails[]>) => {
+      .post(getSearchUrl(), {
+        params: `hitsPerPage=10&page=0&query=${query}`,
+      })
+      .then((image_details: AxiosResponse<imageDetails[] | any>) => {
         let images = new Array();
-        console.log(image_details.config)
-        image_details.data.forEach((image: imageDetails) => {
+        image_details.data.hits.forEach((image: imageDetails) => {
           images.push(generateImagePayload(image));
         });
 

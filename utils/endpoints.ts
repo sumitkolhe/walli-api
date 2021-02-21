@@ -14,5 +14,9 @@ export const getCategoriesUrl = (): string => {
 };
 
 export const getCategoryImagesUrl = (category_id: string): string => {
-  return `https://ku.shanga.co/api/v2/images/getCategoryImages/?category_id=${category_id}&sort=popular&page=1&`;
+  return `https://ku.shanga.co/api/v2/images/getCategoryImages/?category_id=${category_id}&sort=popular&page=1`;
+};
+
+export const getSearchUrl = () => {
+  return `https://9glx4ih8ti-dsn.algolia.net/1/indexes/walli_images_live/query`;
 };
