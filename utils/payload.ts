@@ -5,8 +5,10 @@ export const sanitizeDownloadLinks = (
   rectangle_image: string
 ) => {
   return [
-    square_image.replace("__800_800", ""),
-    rectangle_image.replace("__800_1422", ""),
+    {
+      square: square_image.replace("__800_800", ""),
+      rectangle: rectangle_image.replace("__800_1422", ""),
+    },
   ];
 };
 
