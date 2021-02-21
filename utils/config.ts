@@ -6,8 +6,8 @@ const password: string = "95NwNCVdsE7cM6GFOLUNY1o";
 const sifter_token: string = "7d215d4493cb0b190412bff1ddbd00cda7e63343";
 const algolia_api_key: string = "ef3441f28fb15cf1709e95c1089a0dfc";
 const algolia_id: string = "9GLX4IH8TI";
-const walli_host: string = "ku.shanga.co";
-const algolia_host: string = "9glx4ih8ti-dsn.algolia.net";
+//const walli_host: string = "ku.shanga.co";
+//const algolia_host: string = "9glx4ih8ti-dsn.algolia.net";
 
 const generateAuth = () => {
   const creds = Buffer.from(`${username}:${password}`).toString("base64");

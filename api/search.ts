@@ -8,13 +8,24 @@ import { setHeaders } from "../utils/headers";
 
 module.exports = async (req: NowRequest, res: NowResponse) => {
   setHeaders(res);
-  const query = req.query.query as string;
+  let query = req.query.query as string;
+  let limit = req.query.limit as string;
+  let tag = req.query.tag as string;
+
+  if (query && tag)
+    res.status(400).json({ message: "cannot use tag and query together" });
+
+  query = `query=${query}`;
+  tag = `filters=_tags:'${tag}'`;
+
+  const request_body = {
+    params: `${req.query.tag ? tag : query}&hitsPerPage=${limit ? limit : 5}`,
+  };
 
   try {
+    console.log(request_body);
     await axiosInstance
-      .post(getSearchUrl(), {
-        params: `hitsPerPage=10&page=0&query=${query}`,
-      })
+      .post(getSearchUrl(), request_body)
       .then((image_details: AxiosResponse<imageDetails[] | any>) => {
         let images = new Array();
         image_details.data.hits.forEach((image: imageDetails) => {

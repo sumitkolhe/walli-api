@@ -1,4 +1,4 @@
-import { imageDetails } from "types";
+import { categoryDetails, imageDetails } from "types";
 
 export const sanitizeDownloadLinks = (
   square_image?: string,
@@ -24,8 +24,23 @@ export const generateImagePayload = (data: any) => {
     copyright: data.copyright,
     location: data.location,
     download_links: sanitizeDownloadLinks(data.thumb, data.thumb_rect),
-    tags: data.tags,
+    tags: data._tags,
   };
 
   return image_payload;
+};
+
+export const generateCategoryPayload = (data: any) => {
+  const category_payload: categoryDetails = {
+    id: data.id,
+    name: data.name,
+    category_name: data.category_name,
+    created_at: data.created_at,
+    updated_at: data.updated_at,
+    position: data.position,
+    category_thumnail: data.thumb,
+    category_image: data.square,
+  };
+
+  return category_payload;
 };

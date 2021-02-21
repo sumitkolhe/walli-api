@@ -16,3 +16,14 @@ export interface imageDetails {
 export interface imageListDetails {
   results: [Array<imageDetails>];
 }
+
+export interface categoryDetails {
+  id: string;
+  name: string;
+  category_name: string;
+  created_at: number;
+  updated_at: string;
+  position: string;
+  category_thumnail: string;
+  category_image: string;
+}

@@ -9,13 +9,13 @@ import { setHeaders } from "../utils/headers";
 module.exports = async (req: NowRequest, res: NowResponse) => {
   setHeaders(res);
   const wallpaper_type = req.query.type as string;
+  const page = req.query.page as string;
 
   try {
     await axiosInstance
-      .get(getImagesUrl(wallpaper_type))
+      .get(getImagesUrl(wallpaper_type, page))
       .then((image_details: AxiosResponse<imageDetails[]>) => {
         let images = new Array();
-        console.log(image_details.config)
         image_details.data.forEach((image: imageDetails) => {
           images.push(generateImagePayload(image));
         });
