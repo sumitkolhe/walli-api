@@ -1,4 +1,4 @@
-# :musical_note: Walli API
+# :rainbow: Walli API
 
 An Unofficial API for Walli that allows downloading High-quality wallpapers.
 
@@ -13,6 +13,10 @@ An Unofficial API for Walli that allows downloading High-quality wallpapers.
 - :heart: Open-Source
 - :cloud: Lightweight and has minimum dependencies.
 - :package: Host your own instance on [vercel](https://vercel.com).
+
+## :mag_right: Usage
+
+###  For how to use, check out [Documentation](https://sumitkolhe.gitbook.io/walli).
 
 ## :construction_worker: Local development
 
