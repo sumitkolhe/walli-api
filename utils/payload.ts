@@ -1,14 +1,7 @@
 import { categoryDetails, imageDetails } from "types";
 
-export const sanitizeDownloadLinks = (
-  square_image?: string,
-  rectangle_image?: string
-) => {
-  let download_links = new Array();
-  if (square_image) download_links.push(square_image!.replace("__800_800", ""));
-  if (rectangle_image)
-    download_links.push(rectangle_image!.replace("__800_1422", ""));
-  return download_links;
+export const sanitizeDownloadLinks = (image: string) => {
+  return { thumbnail: image, original: image.replace("__800_800", "") };
 };
 
 export const generateImagePayload = (data: any) => {
@@ -25,7 +18,7 @@ export const generateImagePayload = (data: any) => {
     downloads: data.downloads,
     copyright: data.copyright,
     location: data.location,
-    download_links: sanitizeDownloadLinks(data.thumb, data.thumb_rect),
+    download_links: sanitizeDownloadLinks(data.thumb),
     tags: data._tags,
   };
 

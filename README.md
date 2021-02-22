@@ -2,6 +2,18 @@
 
 An Unofficial API for Walli that allows downloading High-quality wallpapers.
 
+## :sparkles: Features
+
+- :rocket: Blazing fast
+- :sunrise_over_mountains: Download High Quality Wallpapers from Walli.
+- :lock: Search wallpapers using `tag`, `artist`, `name`.
+- :card_file_box: Over 50+ categories of wallpapers to choose from.
+- :rainbow: Get random wallpapers on demand.
+- :page_with_curl: Inbuilt support for pagination and limit number of wallpapers.
+- :heart: Open-Source
+- :cloud: Lightweight and has minimum dependencies.
+- :package: Host your own instance on [vercel](https://vercel.com).
+
 ## :construction_worker: Local development
 
 ### Prerequisites
