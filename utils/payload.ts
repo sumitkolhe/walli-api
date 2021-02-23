@@ -1,7 +1,15 @@
 import { categoryDetails, imageDetails } from "types";
 
-export const sanitizeDownloadLinks = (image: string) => {
-  return { thumbnail: image, original: image.replace("__800_800", "") };
+const enforceHttps = (link: string): string => {
+  if (link.includes("http://")) return link.replace("http://", "https://");
+  return link;
+};
+
+const sanitizeDownloadLinks = (image_link: string) => {
+  return {
+    thumbnail: enforceHttps(image_link),
+    original: enforceHttps(image_link).replace("__800_800", ""),
+  };
 };
 
 export const generateImagePayload = (data: any) => {
