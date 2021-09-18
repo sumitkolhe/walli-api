@@ -13,9 +13,9 @@ module.exports = async (req: NowRequest, res: NowResponse) => {
   try {
     await axiosInstance
       .get(getRandomImagesUrl(count))
-      .then((image_details: AxiosResponse<imageDetails[]>) => {
+      .then((imageDetails: AxiosResponse<imageDetails[]>) => {
         let images = new Array();
-        image_details.data.forEach((image: imageDetails) => {
+        imageDetails.data.forEach((image: imageDetails) => {
           images.push(generateImagePayload(image));
         });
 

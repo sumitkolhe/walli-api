@@ -18,15 +18,15 @@ export const generateImagePayload = (data: any) => {
     title: data.title,
     description: data.description,
     date: data.image_date,
-    artist_id: data.artist_id,
-    artist_name: data.display_name,
-    artist_bio: data.artist_bio,
-    artist_avatar: data.avatar,
+    artistId: data.artistId,
+    artistName: data.displayName,
+    artistBio: data.artistBio,
+    artistAvatar: data.avatar,
     likes: data.likes,
     downloads: data.downloads,
     copyright: data.copyright,
     location: data.location,
-    download_links: sanitizeDownloadLinks(data.thumb),
+    downloadLinks: sanitizeDownloadLinks(data.thumb),
     tags: data._tags,
   };
 
@@ -37,12 +37,12 @@ export const generateCategoryPayload = (data: any) => {
   const category_payload: categoryDetails = {
     id: data.id,
     name: data.name,
-    category_name: data.category_name,
-    created_at: data.created_at,
-    updated_at: data.updated_at,
+    categoryName: data.category_name,
+    createdAt: data.created_at,
+    updatedAt: data.updated_at,
     position: data.position,
-    category_thumnail: data.thumb,
-    category_image: data.square,
+    categoryThumnail: data.thumb,
+    categoryImage: data.square,
   };
 
   return category_payload;

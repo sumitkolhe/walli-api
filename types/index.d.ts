@@ -3,25 +3,25 @@ export interface imageDetails {
   title: string;
   description: string;
   date: number;
-  artist_id: string;
-  artist_name: string;
-  artist_bio: string;
-  artist_avatar: string; //TODO: Maybe remove?
+  artistId: string;
+  artistName: string;
+  artistBio: string;
+  artistAvatar: string; //TODO: Maybe remove?
   likes: string;
   downloads: string;
   location: string;
   copyright: string;
-  download_links: Object<string>;
+  downloadLinks: Object<string>;
   tags?: Array<string>;
 }
 
 export interface categoryDetails {
   id: string;
   name: string;
-  category_name: string;
-  created_at: number;
-  updated_at: string;
+  categoryName: string;
+  createdAt: number;
+  updatedAt: string;
   position: string;
-  category_thumnail: string;
-  category_image: string;
+  categoryThumnail: string;
+  categoryImage: string;
 }

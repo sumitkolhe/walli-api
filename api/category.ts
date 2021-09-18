@@ -15,9 +15,9 @@ module.exports = async (req: NowRequest, res: NowResponse) => {
   try {
     await axiosInstance
       .get(getCategoryImagesUrl(id, page))
-      .then((image_details: AxiosResponse<imageDetails[]>) => {
+      .then((imageDetails: AxiosResponse<imageDetails[]>) => {
         let categories = new Array();
-        image_details.data.forEach((category: imageDetails) => {
+        imageDetails.data.forEach((category: imageDetails) => {
           categories.push(generateImagePayload(category));
         });
 

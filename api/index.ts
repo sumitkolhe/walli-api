@@ -5,6 +5,6 @@ module.exports = async (_req: NowRequest, res: NowResponse) => {
     Server: "online",
     Documentation: "https://sumitkolhe.gitbook.io/walli",
     Github_repo: "https://github.com/sumitkolhe/walli-api",
-    Author: "https://sumit.codes",
+    Author: "https://sumit.co",
   });
 };

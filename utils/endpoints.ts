@@ -7,7 +7,7 @@ export const getImagesUrl = (type: string, page: string): string => {
 
 export const getRandomImagesUrl = (count: string): string => {
   return `https://walli.quosmos.com/api/v2/images/getrandomimages/?artist_id=&type=&count=${
-    count ? count : 5
+    count ? count : 10
   }&lang=en_IN`;
 };
 
@@ -30,6 +30,6 @@ export const getSearchUrl = () => {
   return `https://9glx4ih8ti-dsn.algolia.net/1/indexes/walli_images_live/query`;
 };
 
-export const getOriginalImageUrl = (image_id: string) => {
-  return `https://walli.quosmos.com/api/v2/images/getImage/?id=${image_id}&screen=original&type=rectangle&lang=en_IN`;
+export const getOriginalImageUrl = (imageId: string) => {
+  return `https://walli.quosmos.com/api/v2/images/getImage/?id=${imageId}&screen=original&type=rectangle&lang=en_IN`;
 };

@@ -26,9 +26,9 @@ module.exports = async (req: NowRequest, res: NowResponse) => {
     console.log(request_body);
     await axiosInstance
       .post(getSearchUrl(), request_body)
-      .then((image_details: AxiosResponse<imageDetails[] | any>) => {
+      .then((imageDetails: AxiosResponse<imageDetails[] | any>) => {
         let images = new Array();
-        image_details.data.hits.forEach((image: imageDetails) => {
+        imageDetails.data.hits.forEach((image: imageDetails) => {
           images.push(generateImagePayload(image));
         });
 
